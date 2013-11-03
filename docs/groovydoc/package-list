@@ -1,0 +1,6 @@
+org.ajoberstar.grgit
+org.ajoberstar.grgit.auth
+org.ajoberstar.grgit.exception
+org.ajoberstar.grgit.operation
+org.ajoberstar.grgit.service
+org.ajoberstar.grgit.util
