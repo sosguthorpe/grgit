@@ -2,15 +2,16 @@
 <html>
 <head>
 
-<title>org.ajoberstar.grgit.operation (grgit 0.1.0 API)</title>
+<title>org.ajoberstar.grgit.operation (grgit 0.2.0 API)</title>
 <META NAME="keywords" CONTENT="org.ajoberstar.grgit.operation package">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
 <link href="../../../../groovy.ico" type="image/x-icon" rel="shortcut icon">
 <link href="../../../../groovy.ico" type="image/x-icon" rel="icon">
 <SCRIPT type="text/javascript">
 function windowTitle()
 {
-    parent.document.title="org.ajoberstar.grgit.operation (grgit 0.1.0 API)";
+    parent.document.title="org.ajoberstar.grgit.operation (grgit 0.2.0 API)";
 }
 </SCRIPT>
 <NOSCRIPT>
@@ -77,6 +78,9 @@ function windowTitle()
 Package org.ajoberstar.grgit.operation
 </H2>
 
+ User facing operations classes. Should only be used when obtained
+ from a <TT>Grgit</TT> instance.
+ 
 
 
 <P>&nbsp;</P>
@@ -92,67 +96,123 @@ Package org.ajoberstar.grgit.operation
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="AddOp.html" title="class in org/ajoberstar/grgit/operation">AddOp</A></B></TD>
-        <TD></TD>
+        <TD>Adds files to the index.</TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="ApplyOp.html" title="class in org/ajoberstar/grgit/operation">ApplyOp</A></B></TD>
-        <TD></TD>
+        <TD>Apply a patch to the index.</TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="BranchAddOp.html" title="class in org/ajoberstar/grgit/operation">BranchAddOp</A></B></TD>
+        <TD>Adds a branch to the repository. </TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="BranchChangeOp.html" title="class in org/ajoberstar/grgit/operation">BranchChangeOp</A></B></TD>
+        <TD>Changes a branch's start point and/or upstream branch. </TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="BranchListOp.html" title="class in org/ajoberstar/grgit/operation">BranchListOp</A></B></TD>
+        <TD>Lists branches in the repository. </TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="BranchRemoveOp.html" title="class in org/ajoberstar/grgit/operation">BranchRemoveOp</A></B></TD>
+        <TD>Removes one or more branches from the repository. </TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="BranchStatusOp.html" title="class in org/ajoberstar/grgit/operation">BranchStatusOp</A></B></TD>
+        <TD>Gets the tracking status of a branch. </TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="CheckoutOp.html" title="class in org/ajoberstar/grgit/operation">CheckoutOp</A></B></TD>
-        <TD></TD>
+        <TD>Checks out a branch to the working tree. </TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="CleanOp.html" title="class in org/ajoberstar/grgit/operation">CleanOp</A></B></TD>
+        <TD>Remove untracked files from the working tree. </TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="CloneOp.html" title="class in org/ajoberstar/grgit/operation">CloneOp</A></B></TD>
-        <TD></TD>
+        <TD>Clones an existing repository. </TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="CommitOp.html" title="class in org/ajoberstar/grgit/operation">CommitOp</A></B></TD>
-        <TD></TD>
+        <TD>Commits staged changes to the repository. </TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="FetchOp.html" title="class in org/ajoberstar/grgit/operation">FetchOp</A></B></TD>
-        <TD></TD>
+        <TD>Fetch changes from remotes.</TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="InitOp.html" title="class in org/ajoberstar/grgit/operation">InitOp</A></B></TD>
-        <TD></TD>
+        <TD>Initializes a new repository. </TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="LogOp.html" title="class in org/ajoberstar/grgit/operation">LogOp</A></B></TD>
-        <TD>a</TD>
+        <TD>Gets a log of commits in the repository. </TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="MergeOp.html" title="class in org/ajoberstar/grgit/operation">MergeOp</A></B></TD>
+        <TD>Merges changes from a single head. </TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="PullOp.html" title="class in org/ajoberstar/grgit/operation">PullOp</A></B></TD>
+        <TD>Pulls changes from the remote on the current branch. </TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="PushOp.html" title="class in org/ajoberstar/grgit/operation">PushOp</A></B></TD>
-        <TD></TD>
+        <TD>Push changes to a remote repository.</TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="ResetOp.html" title="class in org/ajoberstar/grgit/operation">ResetOp</A></B></TD>
-        <TD></TD>
+        <TD>Reset changes in the repository.</TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="RevertOp.html" title="class in org/ajoberstar/grgit/operation">RevertOp</A></B></TD>
-        <TD></TD>
+        <TD>Revert one or more commits. </TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="RmOp.html" title="class in org/ajoberstar/grgit/operation">RmOp</A></B></TD>
-        <TD></TD>
+        <TD>Remove files from the index and (optionally) delete them from the working tree.
+ </TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="StatusOp.html" title="class in org/ajoberstar/grgit/operation">StatusOp</A></B></TD>
-        <TD></TD>
+        <TD>Gets the current status of the repository. </TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="TagAddOp.html" title="class in org/ajoberstar/grgit/operation">TagAddOp</A></B></TD>
+        <TD>Adds a tag to the repository. </TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="TagListOp.html" title="class in org/ajoberstar/grgit/operation">TagListOp</A></B></TD>
+        <TD>Lists tags in the repository. </TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="TagRemoveOp.html" title="class in org/ajoberstar/grgit/operation">TagRemoveOp</A></B></TD>
+        <TD>Removes one or more tags from the repository. </TD>
         </TR>
 
 </TABLE>
@@ -171,17 +231,32 @@ Package org.ajoberstar.grgit.operation
     </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
-        <TD WIDTH="15%"><B><A HREF="BranchMode.html" title="class in org/ajoberstar/grgit/operation">BranchMode</A></B></TD>
+        <TD WIDTH="15%"><B><A HREF="BranchAddOp.Mode.html" title="class in org/ajoberstar/grgit/operation">BranchAddOp.Mode</A></B></TD>
+        <TD></TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="BranchChangeOp.Mode.html" title="class in org/ajoberstar/grgit/operation">BranchChangeOp.Mode</A></B></TD>
+        <TD></TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="BranchListOp.Mode.html" title="class in org/ajoberstar/grgit/operation">BranchListOp.Mode</A></B></TD>
+        <TD></TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="FetchOp.TagMode.html" title="class in org/ajoberstar/grgit/operation">FetchOp.TagMode</A></B></TD>
+        <TD></TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="MergeOp.Mode.html" title="class in org/ajoberstar/grgit/operation">MergeOp.Mode</A></B></TD>
         <TD></TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="ResetOp.Mode.html" title="class in org/ajoberstar/grgit/operation">ResetOp.Mode</A></B></TD>
-        <TD></TD>
-        </TR>
-
-        <TR BGCOLOR="white" CLASS="TableRowColor">
-        <TD WIDTH="15%"><B><A HREF="TagMode.html" title="class in org/ajoberstar/grgit/operation">TagMode</A></B></TD>
         <TD></TD>
         </TR>
 

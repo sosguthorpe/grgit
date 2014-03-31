@@ -2,15 +2,16 @@
 <html>
 <head>
 
-<title>org.ajoberstar.grgit (grgit 0.1.0 API)</title>
+<title>org.ajoberstar.grgit (grgit 0.2.0 API)</title>
 <META NAME="keywords" CONTENT="org.ajoberstar.grgit package">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
 <link href="../../../groovy.ico" type="image/x-icon" rel="shortcut icon">
 <link href="../../../groovy.ico" type="image/x-icon" rel="icon">
 <SCRIPT type="text/javascript">
 function windowTitle()
 {
-    parent.document.title="org.ajoberstar.grgit (grgit 0.1.0 API)";
+    parent.document.title="org.ajoberstar.grgit (grgit 0.2.0 API)";
 }
 </SCRIPT>
 <NOSCRIPT>
@@ -77,6 +78,9 @@ function windowTitle()
 Package org.ajoberstar.grgit
 </H2>
 
+ Primary user facing classes. Includes both the primary domain objects
+ and the <TT>Grgit</TT> class that provides access to repositories.
+ 
 
 
 <P>&nbsp;</P>
@@ -92,17 +96,28 @@ Package org.ajoberstar.grgit
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="Branch.html" title="class in org/ajoberstar/grgit">Branch</A></B></TD>
-        <TD></TD>
+        <TD>A branch.</TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="BranchStatus.html" title="class in org/ajoberstar/grgit">BranchStatus</A></B></TD>
+        <TD>The tracking status of a branch.</TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="Commit.html" title="class in org/ajoberstar/grgit">Commit</A></B></TD>
-        <TD>Represents a Git commit.</TD>
+        <TD>A commit.</TD>
+        </TR>
+
+        <TR BGCOLOR="white" CLASS="TableRowColor">
+        <TD WIDTH="15%"><B><A HREF="Credentials.html" title="class in org/ajoberstar/grgit">Credentials</A></B></TD>
+        <TD>Credentials to use for remote operations.</TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="Grgit.html" title="class in org/ajoberstar/grgit">Grgit</A></B></TD>
-        <TD></TD>
+        <TD>Provides support for performaing operations on and getting information about
+ a Git repository.</TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -112,7 +127,7 @@ Package org.ajoberstar.grgit
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="Person.html" title="class in org/ajoberstar/grgit">Person</A></B></TD>
-        <TD>Represents a Git commit.</TD>
+        <TD>A person.</TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -122,7 +137,7 @@ Package org.ajoberstar.grgit
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="Repository.html" title="class in org/ajoberstar/grgit">Repository</A></B></TD>
-        <TD>Represents a Git repository.</TD>
+        <TD>A repository.</TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -132,7 +147,7 @@ Package org.ajoberstar.grgit
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="Status.html" title="class in org/ajoberstar/grgit">Status</A></B></TD>
-        <TD></TD>
+        <TD>Status of the current working tree and index.</TD>
         </TR>
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -142,7 +157,7 @@ Package org.ajoberstar.grgit
 
         <TR BGCOLOR="white" CLASS="TableRowColor">
         <TD WIDTH="15%"><B><A HREF="Tag.html" title="class in org/ajoberstar/grgit">Tag</A></B></TD>
-        <TD></TD>
+        <TD>A tag.</TD>
         </TR>
 
 </TABLE>
