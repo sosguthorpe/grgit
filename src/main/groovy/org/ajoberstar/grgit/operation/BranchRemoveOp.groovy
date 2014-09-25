@@ -19,7 +19,7 @@ import java.util.concurrent.Callable
 
 import org.ajoberstar.grgit.Repository
 import org.ajoberstar.grgit.exception.GrgitException
-
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 import org.eclipse.jgit.api.DeleteBranchCommand
 import org.eclipse.jgit.api.errors.GitAPIException
 
@@ -45,7 +45,7 @@ import org.eclipse.jgit.api.errors.GitAPIException
  * @since 0.2.0
  * @see <a href="http://git-scm.com/docs/git-branch">git-branch Manual Page</a>
  */
-class BranchRemoveOp implements Callable<List<String>> {
+class BranchRemoveOp extends MonitorableOp implements Callable<List<String>> {
 	private final Repository repo
 
 	/**

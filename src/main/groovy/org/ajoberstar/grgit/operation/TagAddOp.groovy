@@ -21,8 +21,8 @@ import org.ajoberstar.grgit.Person
 import org.ajoberstar.grgit.Repository
 import org.ajoberstar.grgit.Tag
 import org.ajoberstar.grgit.exception.GrgitException
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 import org.ajoberstar.grgit.util.JGitUtil
-
 import org.eclipse.jgit.api.TagCommand
 import org.eclipse.jgit.api.errors.GitAPIException
 import org.eclipse.jgit.lib.PersonIdent
@@ -62,7 +62,7 @@ import org.eclipse.jgit.lib.Ref
  * @since 0.2.0
  * @see <a href="http://git-scm.com/docs/git-tag">git-tag Manual Page</a>
  */
-class TagAddOp implements Callable<Tag> {
+class TagAddOp extends MonitorableOp implements Callable<Tag> {
 	private final Repository repo
 
 	/**

@@ -20,7 +20,7 @@ import java.util.concurrent.Callable
 import org.ajoberstar.grgit.Repository
 import org.ajoberstar.grgit.auth.TransportOpUtil
 import org.ajoberstar.grgit.exception.GrgitException
-
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 import org.eclipse.jgit.api.FetchCommand
 import org.eclipse.jgit.api.errors.GitAPIException
 import org.eclipse.jgit.transport.RefSpec
@@ -58,7 +58,7 @@ import org.eclipse.jgit.transport.TagOpt
  * @since 0.2.0
  * @see <a href="http://git-scm.com/docs/git-fetch">git-fetch Manual Reference.</a>
  */
-class FetchOp implements Callable<Void> {
+class FetchOp extends MonitorableOp implements Callable<Void> {
 	private final Repository repo
 
 	/**

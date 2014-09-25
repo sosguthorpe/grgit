@@ -20,8 +20,8 @@ import java.util.concurrent.Callable
 import org.ajoberstar.grgit.Repository
 import org.ajoberstar.grgit.Tag
 import org.ajoberstar.grgit.exception.GrgitException
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 import org.ajoberstar.grgit.util.JGitUtil
-
 import org.eclipse.jgit.api.ListTagCommand
 import org.eclipse.jgit.api.errors.GitAPIException
 
@@ -39,7 +39,7 @@ import org.eclipse.jgit.api.errors.GitAPIException
  * @since 0.2.0
  * @see <a href="http://git-scm.com/docs/git-tag">git-tag Manual Page</a>
  */
-class TagListOp implements Callable<List<Tag>> {
+class TagListOp extends MonitorableOp implements Callable<List<Tag>> {
 	private final Repository repo
 
 	TagListOp(Repository repo) {

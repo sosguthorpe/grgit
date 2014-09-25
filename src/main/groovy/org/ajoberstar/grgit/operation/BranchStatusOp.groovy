@@ -22,8 +22,8 @@ import org.ajoberstar.grgit.Branch
 import org.ajoberstar.grgit.BranchStatus
 import org.ajoberstar.grgit.Repository
 import org.ajoberstar.grgit.exception.GrgitException
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 import org.ajoberstar.grgit.util.JGitUtil
-
 import org.eclipse.jgit.lib.BranchTrackingStatus
 
 /**
@@ -35,7 +35,7 @@ import org.eclipse.jgit.lib.BranchTrackingStatus
  *
  * @since 0.2.0
  */
-class BranchStatusOp implements Callable<BranchStatus> {
+class BranchStatusOp extends MonitorableOp implements Callable<BranchStatus> {
 	private final Repository repo
 
 	/**

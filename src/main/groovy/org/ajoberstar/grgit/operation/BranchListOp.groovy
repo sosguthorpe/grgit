@@ -20,8 +20,8 @@ import java.util.concurrent.Callable
 import org.ajoberstar.grgit.Branch
 import org.ajoberstar.grgit.Repository
 import org.ajoberstar.grgit.exception.GrgitException
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 import org.ajoberstar.grgit.util.JGitUtil
-
 import org.eclipse.jgit.api.ListBranchCommand
 import org.eclipse.jgit.api.errors.GitAPIException
 
@@ -52,7 +52,7 @@ import org.eclipse.jgit.api.errors.GitAPIException
  * @since 0.2.0
  * @see <a href="http://git-scm.com/docs/git-branch">git-branch Manual Page</a>
  */
-class BranchListOp implements Callable<List<Branch>> {
+class BranchListOp extends MonitorableOp implements Callable<List<Branch>> {
 	private final Repository repo
 
 	/**

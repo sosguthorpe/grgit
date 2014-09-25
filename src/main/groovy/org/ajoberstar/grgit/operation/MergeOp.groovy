@@ -19,8 +19,8 @@ import java.util.concurrent.Callable
 
 import org.ajoberstar.grgit.Repository
 import org.ajoberstar.grgit.exception.GrgitException
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 import org.ajoberstar.grgit.util.JGitUtil
-
 import org.eclipse.jgit.api.MergeCommand
 import org.eclipse.jgit.api.MergeResult
 import org.eclipse.jgit.api.errors.GitAPIException
@@ -47,7 +47,7 @@ import org.eclipse.jgit.api.errors.GitAPIException
  * @since 0.2.0
  * @see <a href="http://git-scm.com/docs/git-merge">git-merge Manual Page</a>
  */
-class MergeOp implements Callable<Void> {
+class MergeOp extends MonitorableOp implements Callable<Void> {
 	private final Repository repo
 
 	/**

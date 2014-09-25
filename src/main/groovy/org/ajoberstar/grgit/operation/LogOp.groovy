@@ -20,8 +20,8 @@ import java.util.concurrent.Callable
 import org.ajoberstar.grgit.Commit
 import org.ajoberstar.grgit.Repository
 import org.ajoberstar.grgit.exception.GrgitException
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 import org.ajoberstar.grgit.util.JGitUtil
-
 import org.eclipse.jgit.api.LogCommand
 import org.eclipse.jgit.api.errors.GitAPIException
 import org.eclipse.jgit.lib.ObjectId
@@ -62,7 +62,7 @@ import org.eclipse.jgit.lib.ObjectId
  * @since 0.1.0
  * @see <a href="http://git-scm.com/docs/git-log">git-log Manual Page</a>
  */
-class LogOp implements Callable<List<Commit>> {
+class LogOp extends MonitorableOp implements Callable<List<Commit>> {
 	private final Repository repo
 
 	List includes = []

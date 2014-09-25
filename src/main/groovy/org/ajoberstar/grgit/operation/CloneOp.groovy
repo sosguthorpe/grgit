@@ -21,7 +21,7 @@ import org.ajoberstar.grgit.Credentials
 import org.ajoberstar.grgit.Grgit
 import org.ajoberstar.grgit.auth.TransportOpUtil
 import org.ajoberstar.grgit.exception.GrgitException
-
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 import org.eclipse.jgit.api.CloneCommand
 import org.eclipse.jgit.api.Git
 import org.eclipse.jgit.api.errors.GitAPIException
@@ -41,7 +41,7 @@ import org.eclipse.jgit.api.errors.GitAPIException
  * @since 0.1.0
  * @see <a href="http://git-scm.com/docs/git-clone">git-clone Manual Reference.</a>
  */
-class CloneOp implements Callable<Grgit> {
+class CloneOp extends MonitorableOp implements Callable<Grgit> {
 	/**
 	 * The directory to put the cloned repository.
 	 */

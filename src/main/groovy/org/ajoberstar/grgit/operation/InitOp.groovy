@@ -19,7 +19,7 @@ import java.util.concurrent.Callable
 
 import org.ajoberstar.grgit.Grgit
 import org.ajoberstar.grgit.exception.GrgitException
-
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 import org.eclipse.jgit.api.Git
 import org.eclipse.jgit.api.InitCommand
 import org.eclipse.jgit.api.errors.GitAPIException
@@ -46,7 +46,7 @@ import org.eclipse.jgit.api.errors.GitAPIException
  * @since 0.1.0
  * @see <a href="http://git-scm.com/docs/git-init">git-init Manual Reference.</a>
  */
-class InitOp implements Callable<Grgit> {
+class InitOp extends MonitorableOp implements Callable<Grgit> {
 	/**
 	 * {@code true} if the repository should not have a
 	 * working tree, {@code false} (the default) otherwise

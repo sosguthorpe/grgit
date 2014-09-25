@@ -19,6 +19,7 @@ import java.util.concurrent.Callable
 
 import org.ajoberstar.grgit.Repository
 import org.ajoberstar.grgit.exception.GrgitException
+import org.ajoberstar.grgit.monitoring.MonitorableOp
 
 import org.eclipse.jgit.api.ApplyCommand
 import org.eclipse.jgit.api.errors.GitAPIException
@@ -37,7 +38,7 @@ import org.eclipse.jgit.api.errors.GitAPIException
  * @since 0.1.0
  * @see <a href="http://git-scm.com/docs/git-apply">git-apply Manual Page</a>
  */
-class ApplyOp implements Callable<Void> {
+class ApplyOp extends MonitorableOp implements Callable<Void> {
 	private final Repository repo
 
 	/**
