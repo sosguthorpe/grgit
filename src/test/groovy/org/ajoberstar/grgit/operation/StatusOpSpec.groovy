@@ -74,7 +74,7 @@ class StatusOpSpec extends SimpleGitOpSpec {
 		grgit.status() == new Status(staged: [modified: ['1.txt', '2.txt']])
 	}
 
-	def 'staged new files detected'() {
+	def 'staged new files removed'() {
 		given:
 		assert repoFile('3.txt').delete()
 		assert repoFile('0.txt').delete()
